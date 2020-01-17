@@ -1,0 +1,6 @@
+Pokedex Number,Name,Types,Abilities,Stats
+004,Charmander,['fire'],"['Blaze', 'Solar Power']","['39', '52', '43', '60', '50', '65']"
+005,Charmeleon,['fire'],"['Blaze', 'Solar Power']","['58', '64', '58', '80', '65', '80']"
+006,Charizard,"['fire', 'flying']","['Blaze', 'Solar Power']","['78', '84', '78', '109', '85', '100']"
+010,Caterpie,['bug'],"['Shield Dust', 'Run Away']","['45', '30', '35', '20', '20', '45']"
+011,Metapod,['bug'],['Shed Skin'],"['50', '20', '55', '25', '25', '30']"
