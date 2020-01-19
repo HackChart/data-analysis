@@ -1,5 +1,7 @@
 # Takes a data mined gen8 file and cleans the data for addition to the standard Kaggle format
 
+# TODO: TURN INTO FUNCTIONAL MODULE FOR USE IN NOTEBOOK
+
 # List of current elemental types in Pokemon - available through gen8
 accepted_types = ["normal", "fire", "water", "grass", "electric", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dark", "dragon", "steel", "fairy"]
 
@@ -44,9 +46,20 @@ for i, row in enumerate(cleaned):
                     pass
         row.append(8)
         row.append(False)
-    else:
-        row.append("Generation")
-        row.append("Legendary")
     print(row)    
+
+if cleaned[0][0] == "Pokedex Number":
+    del(cleaned[0])
+
+output = []
+for row in cleaned:
+    if type(row[0]) == int:
+        if row[0] >= 800:
+            output.append(row)
+    else:
+        output.append(row)
+
+    
+
 
         
