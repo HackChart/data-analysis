@@ -42,5 +42,11 @@ for i, row in enumerate(cleaned):
                     row[index] = int(row[index])
                 except ValueError:
                     pass
-        print(row)
+        row.append(8)
+        row.append(False)
+    else:
+        row.append("Generation")
+        row.append("Legendary")
+    print(row)    
+
         
