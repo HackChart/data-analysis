@@ -33,11 +33,8 @@ def convert_to_previous_gen(filename: str) -> list:
         if i >=1:
             for index, item in enumerate(row):
                 row[index] = row[index].title()
-                if index == 0:
-                    try:
-                        row[index] = int(row[index])
-                    except ValueError:
-                        pass
+                if index == 0 and 'g' not in row[index]:
+                    row[index] = int(row[index])
                 elif index == 3:
                     if item not in accepted_types:
                         row.insert(3, "NaN")
@@ -47,7 +44,8 @@ def convert_to_previous_gen(filename: str) -> list:
                     except ValueError:
                         pass
             row.append(8)
-            row.append(False)   
+            row.append(False)
+        print(row)    
 
     if cleaned[0][0] == "Pokedex Number":
         del(cleaned[0])
@@ -63,5 +61,6 @@ def convert_to_previous_gen(filename: str) -> list:
     return output
 
     
-if __name__ == "__main__":
-    gen8 = convert_to_previous_gen("gen8.csv")
+
+
+        
